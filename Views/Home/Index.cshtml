@@ -1,0 +1,27 @@
+﻿@{
+
+}
+
+@model BooksViewModel
+
+<h1 class="col-md-8 mx-auto">BOOKSTORE!!!</h1>
+<div class="col-md-8 mx-auto">
+    @foreach (Book b in Model.Books)
+    {
+        <h3>@b.Title</h3>
+
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item list-group-item-primary">Author: @b.Author</li>
+            <li class="list-group-item list-group-item-secondary">Publisher: @b.Publisher</li>
+            <li class="list-group-item list-group-item-success">ISBN: @b.Isbn</li>
+            <li class="list-group-item list-group-item-danger">Classification: @b.Classification</li>
+            <li class="list-group-item list-group-item-warning">Category: @b.Category</li>
+            <li class="list-group-item list-group-item-info">Page Count: @b.PageCount pages</li>
+            <li class="list-group-item list-group-item-dark">Price: $@b.Price</li>
+
+        </ul>
+    }
+</div>
+<div page-blah="@Model.PageInfo" page-action="Index"></div>
+
