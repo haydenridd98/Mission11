@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mission07.Models
+namespace Mission10.Models
 {
     public class Purchase
     {
@@ -37,7 +37,8 @@ namespace Mission07.Models
 
         public bool Anonymous { get; set; }
 
-
+        [BindNever]
+        public bool Shipped { get; set; }
 
     }
 }

@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using Mission07.Models.ViewModels;
+using Mission10.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mission07.Infrastructure
+namespace Mission10.Infrastructure
 {
 
     [HtmlTargetElement("div", Attributes = "page-blah")]

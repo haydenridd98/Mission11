@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Mission07.Models;
-using Mission07.Models.ViewModels;
+using Mission10.Models;
+using Mission10.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Misson07.Controllers
+namespace Mission10.Controllers
 {
     public class HomeController : Controller
     {

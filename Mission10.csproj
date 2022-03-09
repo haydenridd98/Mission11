@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Misson07\" />
+    <Folder Include="Mission10\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 

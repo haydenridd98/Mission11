@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Mission10.Pages
+namespace Mission10.Pages.Admin
 {
-    public class PurchaseCompletedModel : PageModel
+    public class IndexModel : PageModel
     {
         public void OnGet()
         {

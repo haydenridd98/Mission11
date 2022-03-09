@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Mission07.Infrastructure
+namespace Mission10.Infrastructure
 {
     public static class SessionExtensions
     {

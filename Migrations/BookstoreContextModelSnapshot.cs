@@ -3,9 +3,9 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Mission07.Models;
+using Mission10.Models;
 
-namespace Mission07.Migrations
+namespace Mission10.Migrations
 {
     [DbContext(typeof(BookstoreContext))]
     partial class BookstoreContextModelSnapshot : ModelSnapshot
@@ -16,7 +16,7 @@ namespace Mission07.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.22");
 
-            modelBuilder.Entity("Mission07.Models.BasketLineItem", b =>
+            modelBuilder.Entity("Mission10.Models.BasketLineItem", b =>
                 {
                     b.Property<int>("PurchaseId")
                         .ValueGeneratedOnAdd()
@@ -40,7 +40,7 @@ namespace Mission07.Migrations
                     b.ToTable("BasketLineItem");
                 });
 
-            modelBuilder.Entity("Mission07.Models.Book", b =>
+            modelBuilder.Entity("Mission10.Models.Book", b =>
                 {
                     b.Property<long>("BookId")
                         .ValueGeneratedOnAdd()
@@ -81,7 +81,7 @@ namespace Mission07.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("Mission07.Models.Purchase", b =>
+            modelBuilder.Entity("Mission10.Models.Purchase", b =>
                 {
                     b.Property<int>("PurchaseId")
                         .ValueGeneratedOnAdd()
@@ -112,6 +112,9 @@ namespace Mission07.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("Shipped")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -124,13 +127,13 @@ namespace Mission07.Migrations
                     b.ToTable("Purchases");
                 });
 
-            modelBuilder.Entity("Mission07.Models.BasketLineItem", b =>
+            modelBuilder.Entity("Mission10.Models.BasketLineItem", b =>
                 {
-                    b.HasOne("Mission07.Models.Book", "Book")
+                    b.HasOne("Mission10.Models.Book", "Book")
                         .WithMany()
                         .HasForeignKey("BookId");
 
-                    b.HasOne("Mission07.Models.Purchase", null)
+                    b.HasOne("Mission10.Models.Purchase", null)
                         .WithMany("Lines")
                         .HasForeignKey("PurchaseId1")
                         .OnDelete(DeleteBehavior.Cascade)

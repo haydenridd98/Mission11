@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Mission07.Models;
+using Mission10.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mission07.Controllers
+namespace Mission10.Controllers
 {
     public class PurchaseController : Controller
     {

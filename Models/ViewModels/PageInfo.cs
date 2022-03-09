@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mission07.Models.ViewModels
+namespace Mission10.Models.ViewModels
 {
     public class PageInfo
     {
