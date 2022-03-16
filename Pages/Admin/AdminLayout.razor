@@ -1,7 +1,36 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="bg-info text-white p-2">
-    <span class="navbar-brand m-lg-2">Bookstore Administration</span>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col">
+                <span class="navbar-brand m-lg-2">Bookstore Administration</span>
+            </div>
+
+            <div class="col-2 text-right">
+                <a class="btn btn-sm btn-primary" href="/account/logout" data-toggle="tooltip"
+                    data-placement="bottom" title="Log out of your account">Log Out</a>
+            </div>
+
+        </div>
+
+    </div>
+   
+</div>
+
+<br />
+
+
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <strong class="mr-auto">Welcome!</strong>
+    </div>
+    <div class="toast-body" style="text-align:center">
+        Login Success!
+    </div>
 </div>
 
 <div class="container-fluid">

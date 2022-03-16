@@ -2,23 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Mission10.Models;
+using Mission11.Models;
 
-namespace Mission10.Migrations
+namespace Mission11.Migrations.Bookstore
 {
     [DbContext(typeof(BookstoreContext))]
-    [Migration("20220302072431_Initial")]
-    partial class Initial
+    partial class BookstoreContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.22");
 
-            modelBuilder.Entity("Mission10.Models.BasketLineItem", b =>
+            modelBuilder.Entity("Mission11.Models.BasketLineItem", b =>
                 {
                     b.Property<int>("PurchaseId")
                         .ValueGeneratedOnAdd()
@@ -42,7 +40,7 @@ namespace Mission10.Migrations
                     b.ToTable("BasketLineItem");
                 });
 
-            modelBuilder.Entity("Mission10.Models.Book", b =>
+            modelBuilder.Entity("Mission11.Models.Book", b =>
                 {
                     b.Property<long>("BookId")
                         .ValueGeneratedOnAdd()
@@ -83,7 +81,7 @@ namespace Mission10.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("Mission10.Models.Purchase", b =>
+            modelBuilder.Entity("Mission11.Models.Purchase", b =>
                 {
                     b.Property<int>("PurchaseId")
                         .ValueGeneratedOnAdd()
@@ -114,6 +112,9 @@ namespace Mission10.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("Shipped")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -126,13 +127,13 @@ namespace Mission10.Migrations
                     b.ToTable("Purchases");
                 });
 
-            modelBuilder.Entity("Mission10.Models.BasketLineItem", b =>
+            modelBuilder.Entity("Mission11.Models.BasketLineItem", b =>
                 {
-                    b.HasOne("Mission10.Models.Book", "Book")
+                    b.HasOne("Mission11.Models.Book", "Book")
                         .WithMany()
                         .HasForeignKey("BookId");
 
-                    b.HasOne("Mission10.Models.Purchase", null)
+                    b.HasOne("Mission11.Models.Purchase", null)
                         .WithMany("Lines")
                         .HasForeignKey("PurchaseId1")
                         .OnDelete(DeleteBehavior.Cascade)

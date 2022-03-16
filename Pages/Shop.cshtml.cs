@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Mission10.Infrastructure;
-using Mission10.Models;
+using Mission11.Infrastructure;
+using Mission11.Models;
 
-namespace Mission10.Pages
+namespace Mission11.Pages
 {
     public class ShopModel : PageModel
     {

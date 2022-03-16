@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Mission10.Models;
+using Mission11.Models;
 
-namespace Mission10.Components
+namespace Mission11.Components
 {
     public class CategoriesViewComponent : ViewComponent
     {

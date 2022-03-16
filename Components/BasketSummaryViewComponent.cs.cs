@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Mission10.Models;
-namespace Mission10.Components
+using Mission11.Models;
+namespace Mission11.Components
 {
     public class BasketSummaryViewComponent : ViewComponent
     {

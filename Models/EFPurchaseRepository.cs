@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mission10.Models
+namespace Mission11.Models
 {
     public class EFPurchaseRepository : IPurchaseRepository
     {
